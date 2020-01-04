@@ -1,5 +1,8 @@
-package Libs;
-
+package libs;
+/**
+ * 動的配列要素の基底クラス
+ * @author Takemi
+ */
 public class Iterator {
 	protected int _id;
 	protected static int max_id = 0;

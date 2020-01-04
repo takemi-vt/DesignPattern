@@ -1,5 +1,9 @@
-package Libs;
+package libs;
 
+/**
+ * 片方向リストクラス
+ * @author Takemi
+ */
 public class List {
 	/**
 	 * 先頭の要素
@@ -10,8 +14,11 @@ public class List {
 	 */
 	protected Iterator last;
 	
+	protected int length = 0;
+	
 	public List() {
 		top = null;
+		length = 0;
 	}
 	
 	/**
@@ -19,6 +26,7 @@ public class List {
 	 * @param it
 	 */
 	public void add( Iterator it ) {
+		length ++;
 		if( top == null ) {
 			top = it;
 			last= it;
@@ -39,6 +47,7 @@ public class List {
 	 * @param it
 	 */
 	public void insert( int index, Iterator it ) {
+		length ++;
 		if( index < 0 ) {
 			Iterator tmp = top;
 			top = it;
@@ -64,7 +73,9 @@ public class List {
 	 * @param index
 	 */
 	public void remove( int index ) {
+		
 		if( top == null ) return ;
+		length --;
 		
 		if( index == 0 ) {
 			if( !top.hasNext() ) {
@@ -104,4 +115,10 @@ public class List {
 		}
 		return ret;
 	}
+	
+	/**
+	 * 配列の長さを取得
+	 * @return
+	 */
+	public int Size() { return length; }
 }

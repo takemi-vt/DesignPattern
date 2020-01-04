@@ -1,14 +1,12 @@
 package main;
 
-import Libs.*;
+import libs.*;
+import libs.draw.Document;
 
 public class main {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
-		singleton_test();
-		
-		iterator_test();
+		factory_test();
 	}
 	
 	/**
@@ -78,5 +76,13 @@ public class main {
 		it.setNext( new Iterator() );
 		System.out.println( "it.next.id : " + it.getNext().getId() );
 		*/
+	}
+	
+	/**
+	 * 03 Factoryパターンのテスト
+	 */
+	public static void factory_test() {
+		Document doc = new Document();
+		doc.Render();
 	}
 }

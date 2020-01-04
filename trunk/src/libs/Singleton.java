@@ -1,9 +1,8 @@
-package Libs;
+package libs;
 
 /**
  * シングルトンパターンクラス
  * @author Takemi
- *
  */
 public class Singleton {
 	protected static Singleton instance = null;
