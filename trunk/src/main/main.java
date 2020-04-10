@@ -2,11 +2,20 @@ package main;
 
 import libs.*;
 import libs.draw.Document;
+import libs.draw.InterfaceDrawObject;
+import libs.draw.SampleObject;
 
 public class main {
 
 	public static void main(String[] args) {
 		factory_test();
+		
+		
+		// Interface‚ÌŽg‚¢•û
+		SampleObject sample = new SampleObject();
+		if( sample instanceof InterfaceDrawObject ) {
+			System.out.println("sample‚ÍInterfaceDrawObject‚ðŠÜ‚Þ");
+		}
 	}
 	
 	/**

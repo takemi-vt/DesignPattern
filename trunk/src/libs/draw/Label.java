@@ -5,7 +5,7 @@ package libs.draw;
  * @author Takemi
  *
  */
-public class Label extends DrawObject{
+public class Label extends DrawObject {
 	
 	public String text = "";
 	
